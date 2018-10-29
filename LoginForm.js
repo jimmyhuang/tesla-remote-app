@@ -49,7 +49,7 @@ export default class App extends Component {
           <View>
             <Button title="Submit" onPress={this.handleSubmit} color='white' />
             <Text style={styles.legal}>
-              We do not save your login credentials!
+              Your login credentials are not saved!
             </Text>
           </View>
         </KeyboardAvoidingView>
@@ -70,13 +70,13 @@ export default class App extends Component {
             grant_type: 'password',
             client_id: '81527cff06843c8634fdc09e8ac0abefb46ac849f38fe1e431c2ef2106796384',
             client_secret: 'c7257eb71a564034f9419ee651c7d0e5f7aa6bfbd18bafb5c5c033b093bb2fa3',
-            email: email || 'jhuang5132@gmail.com',
+            email: email,
             password: password
           }),
         });
         let responseJson = await response.json();      
         if (responseJson.access_token !== undefined) {
-          // alert('Successfully authenticated!')
+          alert('Successfully authenticated!')
           fn(responseJson.access_token)
         } else {
           alert('Could not authenticate, please try again')

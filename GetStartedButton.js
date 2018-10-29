@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native'
-import ConnectToVehicle from './ConnectToVehicle'
 
 class GetStartedButton extends Component {
 
@@ -10,7 +9,7 @@ class GetStartedButton extends Component {
       'Do you accept?',
       [
         {text: 'I understand the risk', onPress: () => this.props.startConnectProcess()},
-        {text: 'Yikes, I\'m sp00ked', onPress: () => alert('You\'re safe now')},
+        {text: 'Yikes, I\'m sp00ked', onPress: () => alert('Don\'t worry, you\'re safe now')},
       ],
       { cancelable: false }
     )
@@ -20,7 +19,7 @@ class GetStartedButton extends Component {
     return (
       <View style = {styles.container} >
          <TouchableOpacity onPress={this.onPress}>
-            <Text style = {styles.text}>
+            <Text style={styles.text}>
                Get Started
             </Text>
          </TouchableOpacity>
@@ -28,6 +27,7 @@ class GetStartedButton extends Component {
    )
   }
 }
+
 export default GetStartedButton
 
 const styles = StyleSheet.create ({

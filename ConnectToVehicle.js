@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, TextInput} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import LoginForm from './LoginForm'
 import VehicleState from './VehicleState'
 
@@ -16,7 +16,7 @@ export default class ConnectToVehicle extends Component {
 
   setEstablishedConnection = (bearerToken) => {
     this.setState({
-      bearerToken,
+      bearerToken
     })
 
     async function getVehicleData(bearerToken, fn) {
@@ -63,17 +63,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'black',
     paddingTop: 50,
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    color: 'white',
-    fontWeight: 'bold',
-    marginTop: 25,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: 'white',
-    margin: 10,
   },
 });
