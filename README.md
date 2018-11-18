@@ -13,8 +13,7 @@ General Demo
 ![General Demo](https://i.imgur.com/ViGxPQ0.gif)
 
 Home Page
-<img src="https://i.imgur.com/LcxD3Ug.png" width="48">
-![Home Page](https://i.imgur.com/LcxD3Ug.png)<!-- .element height="50%" width="50%" -->
+<img src="https://i.imgur.com/LcxD3Ug.png" width="50%" height="50%">
 
 Vehicle Page
 
