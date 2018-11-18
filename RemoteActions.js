@@ -6,24 +6,53 @@ export default class RemoteActions extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      vehicleState: {},
     }
-    this.flashHeadlights = this.flashHeadlights.bind(this)
   }
 
-  flashHeadlights() {
+  async flashHeadlights() {
+    try {
+      await fetch(`https://owner-api.teslamotors.com/api/1/vehicles/${this.props.vehicleId}/command/flash_lights`, {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${this.props.bearerToken}`
+        }
+      });
+    } catch (error) {
+      console.error(error);
+    }
     Alert.alert('Headlights flashed')
   }
 
-  remoteUnlock() {
-    Alert.alert('Car unlocked remotely for 2 minutes')
+  async remoteUnlock() {
+    // https://owner-api.teslamotors.com/api/1/vehicles/${this.props.vehicleId}/command/remote_start_drive?password={password}
+    Alert.alert('Not enabled as password is not stored')
   }
 
-  climateControlOn() {
+  async climateControlOn() {
+    try {
+      await fetch(`https://owner-api.teslamotors.com/api/1/vehicles/${this.props.vehicleId}/command/auto_conditioning_start`, {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${this.props.bearerToken}`
+        }
+      });
+    } catch (error) {
+      console.error(error);
+    }
     Alert.alert('Climate control on')
   }
 
-  climateControlOff() {
+  async climateControlOff() {
+    try {
+      await fetch(`https://owner-api.teslamotors.com/api/1/vehicles/${this.props.vehicleId}/command/auto_conditioning_stop`, {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${this.props.bearerToken}`
+        }
+      });
+    } catch (error) {
+      console.error(error);
+    }
     Alert.alert('Climate control off')
   }
 

@@ -47,7 +47,7 @@ export default class VehicleState extends Component {
   render() {
     return (
       <View style={styles.container}>
-        {this.state.userAcceptsConditions ? <RemoteActions /> : 
+        {this.state.userAcceptsConditions ? <RemoteActions bearerToken={this.props.bearerToken} vehicleId={this.props.allData.id_s} /> : 
           <View>
           <YourCarPic />
           <Text style={styles.welcome}> Welcome to your vehicle </Text>
