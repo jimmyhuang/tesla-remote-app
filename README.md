@@ -12,6 +12,14 @@ General Demo
 
 ![General Demo](https://i.imgur.com/ViGxPQ0.gif)
 
+Home Page
+
+![Home Page](https://i.imgur.com/LcxD3Ug.png){:height="50%" width="50%"}
+
+Vehicle Page
+
+![Vehicle Page](https://i.imgur.com/98VlAuG.png){:height="50%" width="50%"}
+
 ## Start the App:
 * Clone this repository and then cd into it.
 * Run `npm i` to download all dependencies
