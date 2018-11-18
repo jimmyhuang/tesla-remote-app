@@ -23,5 +23,5 @@ General Demo
 
 ## Acknowledgements:
 * Created using Facebook's [Create-React-Native-App](https://github.com/react-community/create-react-native-app) 
-* Unofficial Tesla API
+* [Unofficial Tesla API Documentation](https://tesla-api.timdorr.com/)
 
