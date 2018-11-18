@@ -13,11 +13,13 @@ General Demo
 ![General Demo](https://i.imgur.com/ViGxPQ0.gif)
 
 Home Page
-<img src="https://i.imgur.com/LcxD3Ug.png" width="50%" height="50%">
+
+<img src="https://i.imgur.com/LcxD3Ug.png" width="20%" height="20%">
 
 Vehicle Page
 
-![Vehicle Page](https://i.imgur.com/98VlAuG.png)<!-- .element height="50%" width="50%" -->
+<img src="https://i.imgur.com/98VlAuG.png" width="20%" height="20%">
+
 ## Start the App:
 * Clone this repository and then cd into it.
 * Run `npm i` to download all dependencies
