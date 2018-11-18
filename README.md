@@ -10,15 +10,15 @@ Learn more about creating this project at: [A Beginner's Guide to the Unofficial
 ## Demo:
 General Demo
 
-![General Demo](https://i.imgur.com/ViGxPQ0.gif)
+<img src="https://i.imgur.com/ViGxPQ0.gif" width="50%" height="50%">
 
 Home Page
 
-<img src="https://i.imgur.com/LcxD3Ug.png" width="20%" height="20%">
+<img src="https://i.imgur.com/98VlAuG.png" width="20%" height="20%">
 
 Vehicle Page
 
-<img src="https://i.imgur.com/98VlAuG.png" width="20%" height="20%">
+<img src="https://i.imgur.com/LcxD3Ug.png" width="20%" height="20%">
 
 ## Start the App:
 * Clone this repository and then cd into it.
