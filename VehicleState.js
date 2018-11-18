@@ -1,13 +1,23 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import YourCarPic from './YourCarPic'
+import WarnRemoteActionsButton from './WarnRemoteActionsButton'
+import RemoteActions from './RemoteActions'
 
 export default class VehicleState extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      vehicleState: {}
+      vehicleState: {},
+      userAcceptsConditions: false,
     }
+    this.userAcceptsConditions = this.userAcceptsConditions.bind(this)
+  }
+
+  userAcceptsConditions = () => {
+    this.setState({
+      userAcceptsConditions: true
+    })
   }
 
   componentDidMount() {
@@ -37,17 +47,22 @@ export default class VehicleState extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <YourCarPic />
-        <Text style={styles.welcome}> Welcome to your vehicle </Text>
-        <Text style={styles.instructions}> Your car is named {this.props.allData.display_name} </Text>
-        <Text style={styles.instructions}> Your VIN is {this.props.allData.vin} </Text>
-        <Text style={styles.instructions}> Your car has the following options: {this.props.allData.option_codes} </Text>
-        {this.state.vehicleState &&
+        {this.state.userAcceptsConditions ? <RemoteActions /> : 
           <View>
-            <Text style={styles.instructions}>Odometer: {this.state.vehicleState.odometer}</Text>
-            <Text style={styles.instructions}>Car Version: {this.state.vehicleState.car_version}</Text>
+          <YourCarPic />
+          <Text style={styles.welcome}> Welcome to your vehicle </Text>
+          <Text style={styles.instructions}> Your car is named {this.props.allData.display_name} </Text>
+          <Text style={styles.instructions}> Your VIN is: {this.props.allData.vin.slice(0,this.props.allData.vin.length-4)+'XXXX'} {'\n'}</Text>
+          {this.state.vehicleState &&
+            <View>
+              <Text style={styles.welcome}> Current Vehicle State</Text>
+              <Text style={styles.instructions}>Odometer: {Number(this.state.vehicleState.odometer).toFixed(2)} miles</Text>
+              <Text style={styles.instructions}>Car Version: {this.state.vehicleState.car_version}{'\n'}</Text>
+            </View>
+          }
+          <WarnRemoteActionsButton userAcceptsConditions={this.userAcceptsConditions} /> 
           </View>
-        }
+        }   
       </View>
     );
   }
@@ -66,7 +81,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontWeight: 'bold',
-    marginTop: 25,
+    marginTop: 10,
     paddingBottom: 20,
   },
   instructions: {

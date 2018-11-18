@@ -1,18 +1,14 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 
-class GetStartedButton extends Component {
-
-  onPress = () => {
-    this.props.getStarted()
-  }
+class ActionButton extends Component {
 
   render() {
     return (
       <View style = {styles.container} >
-         <TouchableOpacity onPress={this.onPress}>
+         <TouchableOpacity onPress={this.props.action}>
             <Text style={styles.text}>
-               Get Started
+               {this.props.actionName}
             </Text>
          </TouchableOpacity>
       </View>
@@ -20,7 +16,7 @@ class GetStartedButton extends Component {
   }
 }
 
-export default GetStartedButton
+export default ActionButton
 
 const styles = StyleSheet.create ({
    container: {
@@ -30,8 +26,8 @@ const styles = StyleSheet.create ({
       borderWidth: 1,
       padding: 10,
       borderColor: 'white',
-      backgroundColor: 'darkred',
+      backgroundColor: 'black',
       color: 'white',
-      fontWeight: 'bold',
+      marginTop: 10,
    }
 })

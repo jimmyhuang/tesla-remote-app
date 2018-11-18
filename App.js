@@ -10,32 +10,31 @@ const instructions = Platform.select({
     'It is recommended that you use iOS as this app is not optimized for Android'
 });
 
-// type Props = {};
 export default class App extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      userAcceptsConditions: false
+      getStarted: false
     }
-    this.startConnectProcess = this.startConnectProcess.bind(this)
+    this.getStarted = this.getStarted.bind(this)
   }
 
-  startConnectProcess = () => {
+  getStarted = () => {
     this.setState({
-      userAcceptsConditions: true
+      getStarted: true
     })
   }
 
   render() {
     return (
       <View style={styles.container}>
-        {this.state.userAcceptsConditions ? <ConnectToVehicle /> : 
+        {this.state.getStarted ? <ConnectToVehicle /> : 
         <View style={styles.container}>
           <MainPic />
           <Text style={styles.welcome}>Welcome to Tesla Remote</Text>
           <Text style={styles.instructions}>{instructions}</Text>
-          <GetStartedButton startConnectProcess={this.startConnectProcess} />
+          <GetStartedButton getStarted={this.getStarted} />
         </View>
       }
       </View>
