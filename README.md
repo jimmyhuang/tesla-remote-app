@@ -26,7 +26,7 @@ Vehicle Page
 * After all the dependencies are downloaded and installed, type `react-native run-ios` to automatically open the app
 * If there are any issues, please ensure that you have the latest version of XCode
 
-## Troublshooting:
+## Troubleshooting:
 * If you experience issues with the vehicle state not showing, it is likely due to the fact that the unofficial Tesla API does not wake up the car if it is in deep sleep. You will need to wake it up using the official Tesla app first.
 
 ## Acknowledgements:
