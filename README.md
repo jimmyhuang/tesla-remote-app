@@ -3,8 +3,6 @@
 ## Overview:
 This is a basic mobile implementation of the official Tesla App, in which users can find out the vehicle state of their cars, such as charging status and odometer readings, as well as perform basic remote actions, such as flashing headlights or unlocking their car.
 
-Created as a Portfolio Enrichment Piece for Fullstack Academy. 
-
 Learn more about creating this project at: [A Beginner's Guide to the Unofficial Tesla API](https://medium.com/@jhuang5132/a-beginners-guide-to-the-unofficial-tesla-api-a5b3edfe1467). 
 
 ## Demo:
